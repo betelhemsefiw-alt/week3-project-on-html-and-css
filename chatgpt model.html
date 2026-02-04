@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Personal Web Dashboard</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(#e6f2ff, #f2e6ff);
+}
+
+/* NAVIGATION */
+nav{
+    background:white;
+    display:flex;
+    justify-content:space-around;
+    padding:15px;
+    box-shadow: 0 0 10px gray;
+    position:fixed;
+    width:100%;
+    top:0;
+}
+
+nav a{
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+}
+
+/* HERO SECTION */
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:120px 80px 80px;
+    min-height:90vh;
+}
+
+.hero img{
+    width:250px;
+    border-radius:50%;
+}
+
+/* BUTTON */
+button{
+    padding:10px 20px;
+    background:darkblue;
+    color:white;
+    border:none;
+    border-radius:10px;
+}
+
+/* ABOUT BOX */
+.about-box{
+    background:white;
+    width:70%;
+    margin:40px auto;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 0 10px gray;
+    text-align:center;
+}
+
+.about-box img{
+    width:180px;
+}
+
+/* TABLE */
+table{
+    margin:20px auto;
+    border-collapse:collapse;
+}
+
+td, th{
+    border:1px solid black;
+    padding:10px;
+}
+
+/* PROJECT GRID */
+.projects{
+    width:80%;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 0 10px gray;
+    text-align:center;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+/* CONTACT FORM */
+form{
+    background:white;
+    width:350px;
+    margin:40px auto;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 0 10px gray;
+}
+
+input, textarea{
+    width:100%;
+    margin:10px 0;
+    padding:8px;
+}
+
+/* FOOTER */
+footer{
+    background:black;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .projects{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+<div>
+<h1>Hi, I'm Betelhem</h1>
+<p>Web Developer in Training</p>
+<p>I build responsive websites using HTML and CSS.</p>
+<button>View Projects</button>
+</div>
+
+<img src="https://via.placeholder.com/250" alt="photo">
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about-box">
+<h2>About Me</h2>
+<img src="https://via.placeholder.com/180" alt="photo">
+<p>
+I am a student learning web development with HTML and CSS.
+I enjoy designing clean and simple websites.
+</p>
+
+<table>
+<tr>
+<th>Skill</th>
+<th>Level</th>
+</tr>
+<tr>
+<td>HTML</td>
+<td>Intermediate</td>
+</tr>
+<tr>
+<td>CSS</td>
+<td>Beginner</td>
+</tr>
+</table>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2 style="text-align:center;">My Projects</h2>
+
+<div class="projects">
+<div class="card">
+<img src="https://via.placeholder.com/150">
+<h3>Project 1</h3>
+<p>Simple Website</p>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/150">
+<h3>Project 2</h3>
+<p>Landing Page</p>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/150">
+<h3>Project 3</h3>
+<p>Portfolio</p>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/150">
+<h3>Project 4</h3>
+<p>Form Design</p>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/150">
+<h3>Project 5</h3>
+<p>Responsive Site</p>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/150">
+<h3>Project 6</h3>
+<p>Grid Layout</p>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<form>
+<h2>Contact Me</h2>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea placeholder="Your Message"></textarea>
+<button>Send Message</button>
+</form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+© 2026 Betelhem | Facebook | Instagram | LinkedIn
+</footer>
+
+</body>
+</html>
